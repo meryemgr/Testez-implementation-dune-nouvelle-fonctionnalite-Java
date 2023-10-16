@@ -35,7 +35,7 @@ import com.parkit.parkingsystem.model.Ticket;
 <span class="nc" id="L35">			return ps.execute();</span>
 <span class="nc" id="L36">		} catch (Exception ex) {</span>
 <span class="nc" id="L37">			logger.error(&quot;Error fetching next available slot&quot;, ex);</span>
-		} finally {
+<span class="nc" id="L38">		} finally {</span>
 <span class="nc" id="L39">			dataBaseConfig.closeConnection(con);</span>
 <span class="nc" id="L40">			return false;</span>
 		}
@@ -65,7 +65,7 @@ import com.parkit.parkingsystem.model.Ticket;
 <span class="nc" id="L65">			dataBaseConfig.closePreparedStatement(ps);</span>
 <span class="nc" id="L66">		} catch (Exception ex) {</span>
 <span class="nc" id="L67">			logger.error(&quot;Error fetching next available slot&quot;, ex);</span>
-		} finally {
+<span class="nc" id="L68">		} finally {</span>
 <span class="nc" id="L69">			dataBaseConfig.closeConnection(con);</span>
 <span class="nc" id="L70">			return ticket;</span>
 		}

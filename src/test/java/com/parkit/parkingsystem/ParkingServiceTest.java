@@ -1,5 +1,6 @@
 package com.parkit.parkingsystem;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.verify;
@@ -73,6 +74,14 @@ public class ParkingServiceTest {
 		parkingService.processIncomingVehicle();
 		verify(parkingSpotDAO, Mockito.times(1)).updateParking(any(ParkingSpot.class));
 		verify(ticketDAO, Mockito.times(1)).saveTicket(any(Ticket.class));
+
+	}
+
+	public void testGetNextParkingNumberIfAvailableParkingNumberWrongArgument() {
+
+		Ticket ticket = new Ticket();
+		ticket.setVehicleRegNumber("3");
+		assertThrows(IllegalArgumentException.class, () -> when(inputReaderUtil.readSelection()).thenReturn(null));
 
 	}
 

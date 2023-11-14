@@ -19,6 +19,7 @@ import com.parkit.parkingsystem.dao.TicketDAO;
 import com.parkit.parkingsystem.integration.config.DataBaseTestConfig;
 import com.parkit.parkingsystem.integration.service.DataBasePrepareService;
 import com.parkit.parkingsystem.model.Ticket;
+import com.parkit.parkingsystem.service.FareCalculatorService;
 import com.parkit.parkingsystem.service.ParkingService;
 import com.parkit.parkingsystem.util.InputReaderUtil;
 
@@ -29,7 +30,7 @@ public class ParkingDataBaseIT {
 	private static ParkingSpotDAO parkingSpotDAO;
 	private static TicketDAO ticketDAO;
 	private static DataBasePrepareService dataBasePrepareService;
-
+	private static FareCalculatorService fareCalculatorService;
 	@Mock
 	private static InputReaderUtil inputReaderUtil;
 
